@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17A264c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="24P-EY-Xb6">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HotdogNotHotDog" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C1O-eF-RCo">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take A Picture And Check If It's A Hotdog!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gh6-vN-7N2">
+                                <rect key="frame" x="10" y="234" width="355" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="L8C-sd-6Rj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="C1O-eF-RCo" secondAttribute="bottom" id="FwR-5y-hW7"/>
+                            <constraint firstAttribute="trailing" secondItem="C1O-eF-RCo" secondAttribute="trailing" id="NGO-Vh-2Aa"/>
+                            <constraint firstItem="C1O-eF-RCo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="cvg-8p-mHe"/>
+                            <constraint firstAttribute="trailing" secondItem="gh6-vN-7N2" secondAttribute="trailing" constant="10" id="dA7-jM-hA6"/>
+                            <constraint firstItem="C1O-eF-RCo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ktf-Dc-aFW"/>
+                            <constraint firstItem="gh6-vN-7N2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="rt6-eh-Zlu"/>
+                            <constraint firstItem="gh6-vN-7N2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wiq-6Y-yyk"/>
+                            <constraint firstItem="gh6-vN-7N2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="y4s-9g-v44"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BZg-ve-Xkd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="rEF-K6-RzH">
+                            <connections>
+                                <action selector="cameraTapped:" destination="BYZ-38-t0r" id="x5J-3Q-k72"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cameraButton" destination="rEF-K6-RzH" id="gda-Ys-6PU"/>
+                        <outlet property="imageView" destination="C1O-eF-RCo" id="L0s-HZ-w0b"/>
+                        <outlet property="welcomeLabel" destination="gh6-vN-7N2" id="gIQ-ep-xch"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1020" y="-546.47676161919048"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bG6-lx-IgV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="24P-EY-Xb6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="6A3-vj-e9e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                            <color key="textColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sab-5F-cbH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ysh-G7-bsF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="264.80000000000001" y="-545.57721139430294"/>
+        </scene>
+    </scenes>
+</document>
